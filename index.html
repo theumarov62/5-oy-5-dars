@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>API Backend</title>
+    <link rel="stylesheet" href="./src/output.css" />
+    <style>
+      @keyframes animatsiya {
+        0% {
+          opacity: 0;
+        }
+        100% {
+          opacity: 1;
+        }
+      }
+
+      .char {
+        opacity: 0;
+        display: inline-block;
+        animation: animatsiya 0.5s forwards;
+      }
+
+      .char:nth-child(1) {
+        animation-delay: 0s;
+      }
+      .char:nth-child(2) {
+        animation-delay: 0.1s;
+      }
+      .char:nth-child(3) {
+        animation-delay: 0.3s;
+      }
+      .char:nth-child(4) {
+        animation-delay: 0.4s;
+      }
+      .char:nth-child(5) {
+        animation-delay: 0.6s;
+      }
+      .char:nth-child(6) {
+        animation-delay: 0.8s;
+      }
+      .char:nth-child(7) {
+        animation-delay: 1s;
+      }
+      .char:nth-child(8) {
+        animation-delay: 0.9s;
+      }
+      .char:nth-child(9) {
+        animation-delay: 1s;
+      }
+    </style>
+  </head>
+  <body class="p-[10px]">
+    <form id="form" class="flex items-center justify-center gap-2 mb-[100px]">
+      <input
+        type="text"
+        name="name"
+        placeholder="Mashina Nomi"
+        class="w-[200px] h-[40px] border-[1px] p-2 border-black rounded-[2px]"
+      />
+      <textarea
+        name="description"
+        class="resize-x w-[200px] h-[40px] border-[1px] p-2 border-black rounded-[2px]"
+        id=""
+        placeholder="Mashina uchun izoh"
+      ></textarea>
+      <button
+        class="js-delete w-[140px] rounded-[4px] text-[18px] h-[40px] border-2 border-black text-black hover:text-white hover:bg-black bg-transparent cursor-pointer transition duration-300"
+      >
+        Qo'shish
+      </button>
+    </form>
+    <div class="flex items-center justify-center">
+      <h3 id="loader" class="text-[40px] text-center font-bold">
+        <span class="char">L</span>
+        <span class="char">o</span>
+        <span class="char">a</span>
+        <span class="char">d</span>
+        <span class="char">i</span>
+        <span class="char">n</span>
+        <span class="char">g</span>
+        <span class="char">.</span>
+        <span class="char">.</span>
+        <span class="char">.</span>
+      </h3>
+    </div>
+    <ul
+      id="container"
+      class="grid gap-5 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4"
+    ></ul>
+    <ul
+      id="toastContainer"
+      class="absolute top-[20px] right-[20px] flex flex-col gap-[5px]"
+    ></ul>
+    <template id="cardTemplate">
+      <li
+        class="border border-black rounded-lg p-5 shadow-sm flex flex-col min-h-[250px] relative"
+      >
+        <h2 class="text-[30px] mb-[10px]"></h2>
+        <p class="mb-[15px]"></p>
+        <button
+          class="js-delete w-[140px] rounded-[4px] absolute bottom-2 text-[18px] h-[40px] border-2 border-black text-black hover:text-white hover:bg-black bg-transparent cursor-pointer transition duration-300"
+        >
+          Delete
+        </button>
+      </li>
+    </template>
+
+    <div class="flex items-center justify-center mt-[30px]">
+      <h2
+        id="errorText"
+        class="text-[30px] font-bold w-[300px] border-1 border-black rounded-2xl flex items-center justify-center"
+      ></h2>
+    </div>
+    <script type="module" src="./js/app.js"></script>
+  </body>
+</html>
