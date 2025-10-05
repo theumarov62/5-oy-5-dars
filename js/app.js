@@ -19,7 +19,7 @@ if (!TOKEN || TOKEN === "undefined") {
 
 async function loginUser() {
   if (TOKEN) {
-    console.log("Eski token ishlamoqda:", TOKEN);
+    console.log("Oldingi tok ishlavotti:", TOKEN);
     return;
   }
 
