@@ -6,6 +6,8 @@ const elTemplateCard = document.getElementById("cardTemplate");
 const elLoader = document.getElementById("loader");
 const elErrorText = document.getElementById("errorText");
 const elForm = document.getElementById("form");
+const elModalBg = document.getElementById("modalBg");
+const elEditButton = document.getElementById("editButton");
 
 export {
   elContainer,
@@ -14,4 +16,6 @@ export {
   elErrorText,
   elToastContainer,
   elForm,
+  elModalBg,
+  elEditButton,
 };
