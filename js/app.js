@@ -93,10 +93,10 @@ function deleteCar(id) {
   })
     .then((res) => {
       if (res.ok) {
-        toast("O‘chirildi!");
+        toast(`O‘chirildi!`);
         init();
       } else {
-        toast("O‘chirish mumkin emas!");
+        toast(`O‘chirish mumkin emas!1`);
       }
     })
     .catch(() => toast("Xatolik yuz berdi!"));
