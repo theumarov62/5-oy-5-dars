@@ -44,8 +44,8 @@ async function loginUser() {
     localStorage.setItem("token", TOKEN);
     toast("Token olindi!");
   } catch (err) {
-    console.error("Auth xatolik:", err);
-    toast("Auth xatolik: " + err.message);
+    console.error(" xatolik:", err);
+    toast(" xatolik: " + err.message);
   }
 }
 
