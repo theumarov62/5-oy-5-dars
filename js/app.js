@@ -9,8 +9,8 @@ import {
 
 const API_URL = "https://json-api.uz/api/project/fn44";
 let TOKEN = localStorage.getItem("token");
-let USERNAME = "abdulloh6741";
-let PASSWORD = "theumarovmc2010";
+let USERNAME = "fn44";
+let PASSWORD = "fn44";
 
 if (!TOKEN || TOKEN === "undefined") {
   localStorage.removeItem("token");
